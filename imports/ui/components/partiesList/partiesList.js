@@ -6,10 +6,11 @@ import utilsPagination from 'angular-utils-pagination';
 import { Counts } from 'meteor/tmeasday:publish-counts';
 
 import template from './partiesList.html';
-import { Parties } from '../../../api/parties/index';
+import { Parties } from '../../../api/parties';
 import { name as PartiesSort } from '../partiesSort/partiesSort';
 import { name as PartyAdd } from '../partyAdd/partyAdd';
 import { name as PartyRemove } from '../partyRemove/partyRemove';
+import { name as PartyCreator } from '../partyCreator/partyCreator';
 
 class PartiesList {
   constructor($scope, $reactive) {
@@ -34,7 +35,7 @@ class PartiesList {
     this.helpers({
       parties() {
         return Parties.find({}, {
-          sort: this.getReactively('sort')
+          sort : this.getReactively('sort')
         });
       },
       partiesCount() {
@@ -61,7 +62,8 @@ export default angular.module(name, [
   utilsPagination,
   PartiesSort,
   PartyAdd,
-  PartyRemove
+  PartyRemove,
+  PartyCreator
 ]).component(name, {
   template,
   controllerAs: name,
