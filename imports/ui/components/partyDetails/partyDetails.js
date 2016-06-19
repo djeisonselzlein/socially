@@ -5,7 +5,7 @@ import uiRouter from 'angular-ui-router';
 import { Meteor } from 'meteor/meteor';
 
 import template from './partyDetails.html';
-import { Parties } from '../../../api/parties/index';
+import { Parties } from '../../../api/parties';
 import { name as PartyUninvited } from '../partyUninvited/partyUninvited';
 
 class PartyDetails {
@@ -17,6 +17,7 @@ class PartyDetails {
     this.partyId = $stateParams.partyId;
 
     this.subscribe('parties');
+    this.subscribe('users');
 
     this.helpers({
       party() {

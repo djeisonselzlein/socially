@@ -2,7 +2,7 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
 import template from './partyRemove.html';
-import { Parties } from '../../../api/parties/index';
+import { Parties } from '../../../api/parties';
 
 class PartyRemove {
   remove() {

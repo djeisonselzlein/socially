@@ -4,7 +4,7 @@ import angularMeteor from 'angular-meteor';
 import { Meteor } from 'meteor/meteor';
 
 import template from './partyAdd.html';
-import { Parties } from '../../../api/parties/index';
+import { Parties } from '../../../api/parties';
 
 class PartyAdd {
   constructor() {
