@@ -9,12 +9,11 @@ import template from './partiesList.html';
 import { Parties } from '../../../api/parties';
 import { name as PartiesSort } from '../partiesSort/partiesSort';
 import { name as PartiesMap } from '../partiesMap/partiesMap';
-import { name as PartyAdd } from '../partyAdd/partyAdd';
+import { name as PartyAddButton } from '../partyAddButton/partyAddButton';
 import { name as PartyRemove } from '../partyRemove/partyRemove';
 import { name as PartyCreator } from '../partyCreator/partyCreator';
 import { name as PartyRsvp } from '../partyRsvp/partyRsvp';
 import { name as PartyRsvpsList } from '../partyRsvpsList/partyRsvpsList';
-import { name as PartyUnanswered } from '../partyUnanswered/partyUnanswered';
 
 class PartiesList {
   constructor($scope, $reactive) {
@@ -56,7 +55,7 @@ class PartiesList {
     });
   }
 
-  isOwner(party){
+  isOwner(party) {
     return this.isLoggedIn && party.owner === this.currentUserId;
   }
 
@@ -78,7 +77,7 @@ export default angular.module(name, [
   utilsPagination,
   PartiesSort,
   PartiesMap,
-  PartyAdd,
+  PartyAddButton,
   PartyRemove,
   PartyCreator,
   PartyRsvp,

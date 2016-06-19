@@ -2,7 +2,6 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
 import template from './partyRsvpsList.html';
-import { name as PartyRsvpUsers } from '../partyRsvpUsers/partyRsvpUsers';
 
 class PartyRsvpsList { }
 

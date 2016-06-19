@@ -36,7 +36,7 @@ class PartyMap {
     };
   }
 
-  setLocation(latitude, longitude){
+  setLocation(latitude, longitude) {
     this.location = {
       latitude,
       longitude
