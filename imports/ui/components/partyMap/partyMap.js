@@ -3,7 +3,6 @@ import angularMeteor from 'angular-meteor';
 import 'angular-simple-logger';
 import 'angular-google-maps';
 
-import './partyMap.css';
 import template from './partyMap.html';
 
 class PartyMap {
@@ -37,7 +36,7 @@ class PartyMap {
     };
   }
 
-  setLocation(latitude, longitude) {
+  setLocation(latitude, longitude){
     this.location = {
       latitude,
       longitude

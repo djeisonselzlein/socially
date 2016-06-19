@@ -82,8 +82,7 @@ export default angular.module(name, [
   PartyRemove,
   PartyCreator,
   PartyRsvp,
-  PartyRsvpsList,
-  PartyUnanswered
+  PartyRsvpsList
 ]).component(name, {
   template,
   controllerAs: name,
